@@ -31,7 +31,7 @@ You  ──▶  Waveshare ESP32-S3  ──▶  Home Assistant Assist
 
 ![Home Assistant entities, the LED ring animation picker, the media player and the wake-word controls](docs/features.jpg)
 
-- **Voice assistant**: on-device wake word (`alexa`, `okay_nabu`) via
+- **Voice assistant**: on-device wake word (`hey_jarvis`, `okay_nabu`) via
   `micro_wake_word`, the full Home Assistant Assist pipeline (STT / LLM / TTS),
   a wake beep and music ducking while it listens.
 - **Simultaneous music and announcements**: a mixer speaker blends the media and
@@ -69,7 +69,7 @@ You  ──▶  Waveshare ESP32-S3  ──▶  Home Assistant Assist
    Install.
 4. In Home Assistant: the new ESPHome device appears, open **Configure** and
    assign an Assist pipeline.
-5. Say "Alexa" (or "OK Nabu"). The ring should go violet.
+5. Say "Hey Jarvis" (or "OK Nabu"). The ring should go violet.
 
 The example config pins the `v1.0.0` release tag, so a build is reproducible. To
 move to a newer release, bump `ref:` in the `packages:` block to a later tag (or
