@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.1] - 2026-09-18
+
+House release (fork of upstream v1.0.0): the wake word becomes the household's
+namesake. Tagged `v1.0.1`; the example config now pulls the core from this
+fork at that tag, so a build gets this fork's `core.yaml` (upstream's `v1.0.0`
+tag still carries `alexa`).
+
+### Changed
+- **Wake word: `alexa` → `hey_jarvis`.** `micro_wake_word` pins
+  `models/v2/hey_jarvis.json` (same model generation as the retired alexa
+  pin). The sensitivity select retargets to `hey_jarvis` at alexa's measured
+  cutoff ladder — jarvis's own FAPH profile is unmeasured, and its manifest
+  default is a stricter 0.97, so early field tuning may be warranted.
+  `okay_nabu` remains the fallback wake word.
+- **Example config (`waveshare-va.yaml`) sources the core from
+  `fnord123/esphome-waveshare-esp32-s3-audio-va` at `ref: v1.0.1`.**
+
 ## [1.0.0] - 2026-07-18
 
 First stable release. The full voice assistant is confirmed on hardware, the
